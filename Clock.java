@@ -4,8 +4,10 @@
 
 
 class Clock {
-    private int ticks;
-    public Clock() { ticks = 0; }
+    //Monostate implementation
+    private static int ticks = 0;
+    public Clock() {}
+
     public int ticks() { return ticks; }
     public void tick() { ticks++; }
     public void tock() { ticks+=10; }
